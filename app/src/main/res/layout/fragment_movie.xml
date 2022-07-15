@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movieModel"
+            type="com.jc.app.technical.presentation.ui.model.Movie" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:elevation="2dp"
+            android:fontFamily="@font/gotham_bold"
+            android:padding="@dimen/spacing_large"
+            android:text="@string/tv_movie"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_larger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_margin="@dimen/spacing_smaller"
+            android:scaleType="centerInside"
+            app:showImage="@{movieModel.urlImage}"
+            app:srcCompat="@drawable/ic_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/gotham_bold"
+            android:paddingHorizontal="@dimen/spacing_smaller"
+            android:paddingVertical="@dimen/spacing_smaller"
+            android:text="@{movieModel.title}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_small"
+            tools:text="Love and Thunder" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_smaller"
+            android:text="@{movieModel.description}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_smaller"
+            tools:text="After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor enlists the help of King Valkyrie, Korg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_smaller"
+            android:fontFamily="@font/gotham_bold"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:text="Other Info"
+            android:textAlignment="center"
+            android:textSize="@dimen/font_larger"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            android:textAlignment="center"
+            app:setFirstText="@{@string/tv_release_date}"
+            app:setSecondText="@{movieModel.releaseDate}"
+            tools:text="Release date: JC" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            android:textAlignment="center"
+            app:setFirstText="@{@string/tv_vote_count}"
+            app:setSecondText="@{movieModel.voteCount}"
+            tools:text="Vote: 123123" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            android:textAlignment="center"
+            app:setFirstText="@{@string/tv_popularity}"
+            app:setSecondText="@{movieModel.popularity}"
+            tools:text="Popularity: 123123" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

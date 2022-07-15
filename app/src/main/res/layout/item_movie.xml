@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.jc.app.technical.presentation.ui.model.Movie" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:layout_marginVertical="@dimen/spacing_4"
+        app:cardCornerRadius="@dimen/spacing_smaller">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/spacing_small"
+            android:paddingVertical="@dimen/spacing_tiny"
+            android:weightSum="5">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                app:showCircleCropImage="@{movie.urlImage}"
+                app:srcCompat="@drawable/ic_image" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/spacing_small"
+                android:paddingVertical="@dimen/spacing_tiny">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/spacing_small"
+                    android:fontFamily="@font/gotham_bold"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/spacing_smaller"
+                    android:paddingVertical="@dimen/spacing_smaller"
+                    android:text="@{movie.title}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_small"
+                    tools:text="Love and Thunder" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/spacing_small"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/spacing_smaller"
+                    android:text="@{movie.description}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_smaller"
+                    android:ellipsize="end"
+                    android:lines="3"
+                    tools:text="After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor enlists the help of King Valkyrie, Korg" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

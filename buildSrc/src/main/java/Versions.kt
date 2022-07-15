@@ -1,0 +1,25 @@
+object Versions {
+
+    const val gradlePlugin = "7.2.1"
+    const val kotlin = "1.6.10"
+    const val material = "1.6.1"
+    const val constraintLayout = "2.1.4"
+    const val jUnit = "4.13.2"
+    const val jUnitAndroid = "1.1.3"
+    const val core = "1.8.0"
+    const val appCompat = "1.4.2"
+    const val gson = "2.9.0"
+    const val activity = "1.5.0"
+    const val fragment = "2.5.0"
+    const val androidRuntime = "2.7.1"
+    const val retrofit2 = "2.9.0"
+    const val okhttp3 = "4.9.1"
+    const val coroutines = "1.6.4"
+    const val mockk = "1.11.0"
+    const val espresso = "3.4.0"
+    const val safeArgs = "2.5.0"
+    const val dagger = "2.40"
+    const val room = "2.4.2"
+    const val coil = "1.4.0"
+
+}
