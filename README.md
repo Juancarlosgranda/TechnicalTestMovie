@@ -32,7 +32,7 @@ Common used libraries :
 - [Mockk](https://mockk.io/)
 - [Dagger 2](https://dagger.dev/)
 - [Room](https://developer.android.com/training/data-storage/room)
-- 
+
 License
 -----
  ```
